@@ -18,7 +18,7 @@ jinja_env = jinja2.Environment(
 
 class MainPageHandler(webapp2.RequestHandler):
     def get(self):
-        form_template = jinja_env.get_template('templates/form.html')
+        form_template = jinja_env.get_template('templates/mainpage.html')
         self.response.write(form_template.render())  # the response
 class LoginPageHandler(webapp2.RequestHandler):
     def get(self):
@@ -56,7 +56,7 @@ class MapsPageHandler(webapp2.RequestHandler):
 
 # the app configuration section
 app = webapp2.WSGIApplication([
-    ('/main', MainPageHandler), #this maps the root url to the Main Page Handler
+    ('/', MainPageHandler), #this maps the root url to the Main Page Handler
     ('/login', LoginPageHandler),
     ('/translator', TranslatorPageHandler),
     ('/events', EventsPageHandler),
