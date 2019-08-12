@@ -8,7 +8,12 @@ h1{
   text-shadow: 2px 2px 2px black;
 
 }
-
+menu{
+  display: grid;
+  grid-template-rows: 1fr 1fr;
+  grid-column: 1fr 1fr;
+  height: 400px;
+}
 a: hover{
   font-size: 18px;
   color: darkgoldenrod;
