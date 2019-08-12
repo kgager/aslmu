@@ -55,23 +55,16 @@ class MapsPageHandler(webapp2.RequestHandler):
         form_template = jinja_env.get_template('templates/mappage.html')
         self.response.write(form_template.render())  # the response
 
-# class RecipeDisplayHandler(webapp2.RequestHandler):
-#     def post(self):
-#         query=self.request.get('query')
-#         base_url = 'http://www.recipepuppy.com/api/?'
-#         params = { 'q': query }
-#         response = urlfetch.fetch(base_url + urlencode(params)).content
-#         results = json.loads(response)
-#         # bottom=self.request.get('bottom')
-#         # memetype=self.request.get('memetype')
-#         result_template = jinja_env.get_template('templates/recipe.html')
-#         self.response.write(result_template.render({
-#             'results': results
-#             # 'query': query
-#             # 'bottom': bottom,
-#             # 'image_file': memetype
-#
-#         }))
+class ManualHandler(webapp2.RequestHandler):
+    def get(self):
+        form_template = jinja_env.get_template('templates/manual.html')
+        self.response.write(form_template.render())  # the response
+
+class ChatroomPageHandler(webapp2.RequestHandler):
+    def get(self):
+        form_template = jinja_env.get_template('templates/chatroom.html')
+        self.response.write(form_template.render())  # the response
+
 
 # the app configuration section
 app = webapp2.WSGIApplication([
@@ -80,6 +73,8 @@ app = webapp2.WSGIApplication([
     ('/translator', TranslatorPageHandler),
     ('/events', EventsPageHandler),
     ('/maps', MapsPageHandler),
-    ('/myprofile', MyProfilePageHandler)
+    ('/myprofile', MyProfilePageHandler),
+    ('/chatroom', ChatroomPageHandler),
+    ('/manual', ManualHandler)
     #('/recipe', RecipeDisplayHandler)
 ], debug=True)
