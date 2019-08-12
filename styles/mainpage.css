@@ -5,9 +5,12 @@ body{
 h1{
   text-align: center;
   color: white;
+  font-size: 50px;
   text-shadow: 2px 2px 2px black;
-
 }
+/* h1:hover{
+text-shadow: 2px 2px 4px black;
+} */
 menu{
   display: grid;
   grid-template-rows: 1fr 1fr;
@@ -22,6 +25,7 @@ menu div{
   font-size: 60px;
   font-weight: bold;
   opacity: .7;
+  text-shadow: 2px 2px 2px white;
 }
 #map{
   background-color: maroon;
@@ -29,25 +33,33 @@ menu div{
 }
 #map:hover{
   opacity: 1.0;
+  text-shadow: 2px 2px 4px white;
 }
 #translator{
   background-color: turquoise;
 }
 #translator:hover{
   opacity: 1.0;
+  text-shadow: 2px 2px 4px white;
 }
 #event{
   background-color: peru;
 }
 #event:hover{
   opacity: 1.0;
+  text-shadow: 2px 2px 4px white;
 }
 #myprofile{
   background-color: orange;
 }
 #myprofile:hover{
   opacity: 1.0;
+  text-shadow: 2px 2px 4px white;
 }
 a{
   color: black;
+}
+a:hover{
+  color: white;
+  text-shadow: 2px 2px 4px black;
 }
