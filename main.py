@@ -20,22 +20,30 @@ class MainPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/mainpage.html')
         self.response.write(form_template.render())  # the response
+    def post(self):
+        form_template = jinja_env.get_template('templates/mainpage.html')
+        self.response.write(form_template.render())
+
 class LoginPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/loginpage.html')
         self.response.write(form_template.render())  # the response
+
 class TranslatorPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/translatorpage.html')
         self.response.write(form_template.render())  # the response
+
 class EventsPageHandler(webapp2.RequestHandler):
     def get(self):
-        form_template = jinja_env.get_template('templates/eventspage.html')
+        form_template = jinja_env.get_template('templates/eventpage.html')
         self.response.write(form_template.render())  # the response
+
 class MapsPageHandler(webapp2.RequestHandler):
     def get(self):
-        form_template = jinja_env.get_template('templates/mapspage.html')
+        form_template = jinja_env.get_template('templates/mappage.html')
         self.response.write(form_template.render())  # the response
+
 # class RecipeDisplayHandler(webapp2.RequestHandler):
 #     def post(self):
 #         query=self.request.get('query')
