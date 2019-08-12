@@ -56,8 +56,8 @@ class MapsPageHandler(webapp2.RequestHandler):
 
 # the app configuration section
 app = webapp2.WSGIApplication([
-    ('/', MainPageHandler), #this maps the root url to the Main Page Handler
-    ('/login', LoginPageHandler),
+    ('/main', MainPageHandler), #this maps the root url to the Main Page Handler
+    ('/', LoginPageHandler),
     ('/translator', TranslatorPageHandler),
     ('/events', EventsPageHandler),
     ('/maps', MapsPageHandler),
