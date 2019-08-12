@@ -38,6 +38,9 @@ class TranslatorPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/translatorpage.html')
         self.response.write(form_template.render())  # the response
+    def post(self):
+        form_template = jinja_env.get_template('templates/translatorpage.html')
+        self.response.write(form_template.render())  # the response
 
 class EventsPageHandler(webapp2.RequestHandler):
     def get(self):
