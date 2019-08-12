@@ -10,10 +10,15 @@
       <link rel="stylesheet" href="asl.css">
   <body>
     <h1>English to ASL Translator</h1>
-    <p>this is the translator page</p>
+    <p>Please Type in English Here:</p>
+    <form method="post" action="/translator">
+      <input type="text" name="english">
+      <input type="submit" value="Translate"/>
+    </form>
     <form method="post" action="/main">
       <input type="submit" value="GO TO MAIN"/>
     </form>
+    {{ english }}
   </body>
 </html>
 

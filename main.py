@@ -29,10 +29,21 @@ class LoginPageHandler(webapp2.RequestHandler):
         form_template = jinja_env.get_template('templates/loginpage.html')
         self.response.write(form_template.render())  # the response
 
+class MyProfilePageHandler(webapp2.RequestHandler):
+    def get(self):
+        form_template = jinja_env.get_template('templates/myprofile.html')
+        self.response.write(form_template.render())
+
 class TranslatorPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/translatorpage.html')
         self.response.write(form_template.render())  # the response
+    def post(self):
+        english = self.request.get("english")
+        form_template = jinja_env.get_template('templates/translatorpage.html')
+        self.response.write(form_template.render({
+        "english": english
+        }))  # the response
 
 class EventsPageHandler(webapp2.RequestHandler):
     def get(self):
@@ -69,5 +80,6 @@ app = webapp2.WSGIApplication([
     ('/translator', TranslatorPageHandler),
     ('/events', EventsPageHandler),
     ('/maps', MapsPageHandler),
+    ('/myprofile', MyProfilePageHandler)
     #('/recipe', RecipeDisplayHandler)
 ], debug=True)
