@@ -1,6 +1,14 @@
+@font-face {
+  font-family: 'DissaramasCRUFingerspelling';
+  src: url('asl.ttf') format('truetype');
+}
+
+
 body{
   background-image: linear-gradient(turquoise, white);
   height: 100vh;
+  font-family: 'DissaramasCRUFingerspelling';
+  font-size: 100px;
 }
 h1{
   text-align: center;
