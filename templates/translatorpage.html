@@ -4,12 +4,6 @@
   <meta charset="utf-8">
   <link rel="stylesheet" href="/styles/translatorpage.css">
   <title>ASL</title>
-<<<<<<< HEAD
-=======
-
-
-
->>>>>>> d5cb7b75982dacf14728013ef956329d3c59ffc5
   </head>
   <body>
     <h1>English to ASL Translator</h1>
@@ -21,24 +15,13 @@
     <form method="post" action="/main">
       <input type="submit" value="GO TO MAIN"/>
     </form>
-    <div class="asl">
-<<<<<<< HEAD
-    {{ words }}
-    {{ img  }}
-    <!-- <img src="{{ gif_url }}"> -->
-=======
-    {{ english }}
-    </div>
-    
-    <p>Try Giphy!:</p>
-    <form method="post" action="/translator">
-      <input type="text" name="giphyQ">
-      <input type="submit" value="Translate"/>
-    </form>
-    <div class="gif">
-    <img src="{{ gif_url }}">
->>>>>>> d5cb7b75982dacf14728013ef956329d3c59ffc5
-    </div>
+    {% for word in result %}
+        <div id="asl">
+          <img src="{{ word }}"/>
+          {{ word }}
+          <!-- <img src="{{ gif_url }}"> -->
+        </div>
+    {% endfor %}
   </body>
 </html>
 

@@ -35,25 +35,28 @@ class TranslatorPageHandler(webapp2.RequestHandler):
         form_template = jinja_env.get_template('templates/translatorpage.html')
         self.response.write(form_template.render())
     def post(self):
-        english = self.request.get("english").lower()
-        giphyQ = str(self.request.get("giphyQ"))
-        gif_url = ""
-        if giphyQ:
-            giphyP = {
-            "q": giphyQ,
-            "api_key": "BWkKadSlz5EiOcSh3R61iPb5WPKb50Ha",
-            "limit": 1,
-            "rating": "g",
-            "lang": "en"
-            }
-            giphyBaseURL = "http://api.giphy.com/v1/gifs/search?"
-            giphyURL = giphyBaseURL + urlencode(giphyP)
-            giphyR = json.loads(urlfetch.fetch(giphyURL).content)
-            gif_url = giphyR['data'][0]['images']['original']['url']
+        Query = str(self.request.get("Query")).split(" ")
+        print(Query)
+        result = []
+        for word in Query:
+            if word in lexicon:
+                giphyP = {
+                "q": word,
+                "api_key": "BWkKadSlz5EiOcSh3R61iPb5WPKb50Ha",
+                "limit": 1,
+                "rating": "g",
+                "lang": "en"
+                }
+                giphyBaseURL = "http://api.giphy.com/v1/gifs/search?"
+                giphyURL = giphyBaseURL + urlencode(giphyP)
+                giphyR = json.loads(urlfetch.fetch(giphyURL).content)
+                gif_url = giphyR['data'][0]['images']['original']['url']
+                result.append(gif_url)
+            else:
+                result.append(word)
         form_template = jinja_env.get_template('templates/translatorpage.html')
         self.response.write(form_template.render({
-        "english": english,
-        "gif_url": gif_url
+        "result": result
         }))
 
 class EventsPageHandler(webapp2.RequestHandler):
@@ -75,6 +78,12 @@ class ChatroomPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/chatroom.html')
         self.response.write(form_template.render())
+
+lexicon = {
+    "hello": "hello"
+}
+
+
 
 app = webapp2.WSGIApplication([
     ('/main', MainPageHandler),
