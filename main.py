@@ -2,6 +2,8 @@ import os
 import json
 import webapp2
 import jinja2
+import urllib
+from random import randint
 from urllib import urlencode
 from google.appengine.api import urlfetch
 
@@ -34,9 +36,22 @@ class TranslatorPageHandler(webapp2.RequestHandler):
         self.response.write(form_template.render())
     def post(self):
         english = self.request.get("english").lower()
+        giphyQ = str(self.request.get("giphyQ"))
+        giphyP = {
+        "q": giphyQ,
+        "api_key": "BWkKadSlz5EiOcSh3R61iPb5WPKb50Ha",
+        "limit": 1,
+        "rating": "g",
+        "lang": "en"
+        }
+        giphyBaseURL = "http://api.giphy.com/v1/gifs/search?"
+        giphyURL = giphyBaseURL + urlencode(giphyP)
+        giphyR = json.loads(urlfetch.fetch(giphyURL).content)
+        gif_url = giphyR['data'][0]['images']['original']['url']
         form_template = jinja_env.get_template('templates/translatorpage.html')
         self.response.write(form_template.render({
-        "english": english
+        "english": english,
+        "gif_url": gif_url
         }))
 
 class EventsPageHandler(webapp2.RequestHandler):

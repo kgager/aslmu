@@ -3,7 +3,6 @@
   src: url('/styles/asl.ttf') format('truetype');
 }
 
-
 body{
   background-image: linear-gradient(turquoise, white);
   height: 100vh;

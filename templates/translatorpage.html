@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="en" dir="ltr">
   <head>
-    <meta charset="utf-8">
-    <title></title>
+  <meta charset="utf-8">
+  <link rel="stylesheet" href="/styles/translatorpage.css">
+  <title>ASL</title>
   </head>
-      <link rel="stylesheet" href="/styles/translatorpage.css">
-      <meta charset="UTF-8">
-      <title>ASL</title>
-      <!-- <link rel="stylesheet" href="/styles/translatorpage.css"> -->
-
+  <body>
     <h1>English to ASL Translator</h1>
     <p>Please Type in English Here:</p>
-  <body>
     <form method="post" action="/translator">
       <input type="text" name="english">
       <input type="submit" value="Translate"/>
@@ -21,6 +17,14 @@
     </form>
     <div class="asl">
     {{ english }}
+    </div>
+    <p>Try Giphy!:</p>
+    <form method="post" action="/translator">
+      <input type="text" name="giphyQ">
+      <input type="submit" value="Translate"/>
+    </form>
+    <div class="gif">
+    <img src="{{ gif_url }}">
     </div>
   </body>
 </html>
