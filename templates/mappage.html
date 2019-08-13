@@ -34,9 +34,19 @@ function initMap() {
     * The key parameter will contain your own API key (which is not needed for this tutorial)
     * The callback parameter executes the initMap() function
     -->
-    <script async defer
-    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBg1D_qBuFkvQlxAahmjsiR3h9y2v4aaU&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaZiiJUcgpqZMKakReHdYqeUtVv9wUHjg&callback=initMap">
     </script>
+    <div class="form-popup" id="myForm">
+      <form action="/action_page.php" class="form-container">
+        <h1>Put me on the map!</h1>
+
+        <label for="location"><b>Location</b></label>
+        <input type="text" placeholder="Enter Address" name="Location" required>
+
+        <button type="submit" class="btn">Put me on the map!</button>
+
+      </form>
+    </div>
     <form method="post" action="/main">
       <input type="submit" value="GO TO MAIN"/>
     </form>

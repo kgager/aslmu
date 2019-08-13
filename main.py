@@ -82,6 +82,19 @@ class ChatroomPageHandler(webapp2.RequestHandler):
 lexicon = {
     "hello": "asl hello",
     "car": "asl car",
+    "dog": "asl dog",
+    "cat": "asl cat",
+    "house": "asl house",
+    "table": "asl car",
+    "chair": "asl chair",
+    "drink": "asl drink",
+    "hat": "asl hat",
+    "tv": "asl tv",
+    "shirt": "asl shirt",
+    "shoes": "asl shoes",
+    "water": "asl water",
+    "allergic": "asl allergic",
+    "pants": "asl pants"
 }
 
 
