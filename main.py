@@ -37,17 +37,19 @@ class TranslatorPageHandler(webapp2.RequestHandler):
     def post(self):
         english = self.request.get("english").lower()
         giphyQ = str(self.request.get("giphyQ"))
-        giphyP = {
-        "q": giphyQ,
-        "api_key": "BWkKadSlz5EiOcSh3R61iPb5WPKb50Ha",
-        "limit": 1,
-        "rating": "g",
-        "lang": "en"
-        }
-        giphyBaseURL = "http://api.giphy.com/v1/gifs/search?"
-        giphyURL = giphyBaseURL + urlencode(giphyP)
-        giphyR = json.loads(urlfetch.fetch(giphyURL).content)
-        gif_url = giphyR['data'][0]['images']['original']['url']
+        gif_url = ""
+        if giphyQ:
+            giphyP = {
+            "q": giphyQ,
+            "api_key": "BWkKadSlz5EiOcSh3R61iPb5WPKb50Ha",
+            "limit": 1,
+            "rating": "g",
+            "lang": "en"
+            }
+            giphyBaseURL = "http://api.giphy.com/v1/gifs/search?"
+            giphyURL = giphyBaseURL + urlencode(giphyP)
+            giphyR = json.loads(urlfetch.fetch(giphyURL).content)
+            gif_url = giphyR['data'][0]['images']['original']['url']
         form_template = jinja_env.get_template('templates/translatorpage.html')
         self.response.write(form_template.render({
         "english": english,
