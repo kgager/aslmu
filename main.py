@@ -33,7 +33,7 @@ class TranslatorPageHandler(webapp2.RequestHandler):
         form_template = jinja_env.get_template('templates/translatorpage.html')
         self.response.write(form_template.render())
     def post(self):
-        english = self.request.get("english")
+        english = self.request.get("english").lower()
         form_template = jinja_env.get_template('templates/translatorpage.html')
         self.response.write(form_template.render({
         "english": english
