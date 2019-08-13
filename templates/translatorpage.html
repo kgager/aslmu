@@ -30,9 +30,6 @@
       <input type="text" name="Query">
       <input type="submit" value="Translate"/>
     </form>
-    <form method="post" action="/main">
-      <input type="submit" value="GO TO MAIN"/>
-    </form>
     {% for word in result %}
         <div class="asl">
           {% if "http" in word %}
