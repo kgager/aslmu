@@ -16,7 +16,7 @@ menu{
   grid-template-rows: 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   height: 400px;
-  grid-gap: 10px;
+  grid-gap: 6px;
 }
 menu div{
   display: flex;
@@ -29,46 +29,52 @@ menu div{
 }
 #map{
   background-color: maroon;
+  height: 200px;
   opacity: 0.7;
 }
 #map:hover{
   opacity: 1.0;
-  text-shadow: 2px 2px 4px white;
+  text-shadow: 2px 2px 4px black;
 }
 #translator{
   background-color: turquoise;
+  height: 200px;
 }
 #translator:hover{
   opacity: 1.0;
-  text-shadow: 2px 2px 4px white;
+  text-shadow: 2px 2px 4px black;
 }
 #event{
   background-color: peru;
+  height: 200px;
 }
 #event:hover{
   opacity: 1.0;
-  text-shadow: 2px 2px 4px white;
+  text-shadow: 2px 2px 4px black;
 }
 #myprofile{
   background-color: orange;
+  height: 200px;
 }
 #myprofile:hover{
   opacity: 1.0;
-  text-shadow: 2px 2px 4px white;
+  text-shadow: 2px 2px 4px black;
 }
 #chatroom{
   background-color: darkslateblue;
+  height: 200px;
 }
 #chatroom:hover{
   opacity: 1.0;
-  text-shadow: 2px 2px 4px white;
+  text-shadow: 2px 2px 4px black;
 }
 #manual{
   background-color: MediumVioletRed;
+  height: 200px;
 }
 #manual:hover{
   opacity: 1.0;
-  text-shadow: 2px 2px 4px white;
+  text-shadow: 2px 2px 4px black;
 }
 a{
   color: black;
