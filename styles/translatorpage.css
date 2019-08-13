@@ -1,6 +1,6 @@
 @font-face {
   font-family: 'DissaramasCRUFingerspelling';
-  src: url('asl.ttf') format('truetype');
+  src: url('/styles/asl.ttf') format('truetype');
 }
 
 
