@@ -41,7 +41,7 @@ class TranslatorPageHandler(webapp2.RequestHandler):
         for word in Query:
             if word in lexicon:
                 giphyP = {
-                "q": word,
+                "q": lexicon.get(word),
                 "api_key": "BWkKadSlz5EiOcSh3R61iPb5WPKb50Ha",
                 "limit": 1,
                 "rating": "g",
@@ -80,7 +80,8 @@ class ChatroomPageHandler(webapp2.RequestHandler):
         self.response.write(form_template.render())
 
 lexicon = {
-    "hello": "hello"
+    "hello": "asl hello",
+    "car": "asl car",
 }
 
 
