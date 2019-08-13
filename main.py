@@ -64,6 +64,11 @@ class EventsPageHandler(webapp2.RequestHandler):
         form_template = jinja_env.get_template('templates/eventpage.html')
         self.response.write(form_template.render())
 
+class IndexPageHandler(webapp2.RequestHandler):
+    def get(self):
+        form_template = jinja_env.get_template('templates/index.html')
+        self.response.write(form_template.render())
+
 class MapsPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/mappage.html')
@@ -93,5 +98,6 @@ app = webapp2.WSGIApplication([
     ('/maps', MapsPageHandler),
     ('/myprofile', MyProfilePageHandler),
     ('/chatroom', ChatroomPageHandler),
-    ('/manual', ManualHandler)
+    ('/manual', ManualHandler),
+    ('/index', IndexPageHandler)
 ], debug=True)
