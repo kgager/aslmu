@@ -14,7 +14,7 @@ text-shadow: 2px 2px 4px black;
 menu{
   display: grid;
   grid-template-rows: 1fr 1fr;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 1fr 1fr 1fr;
   height: 400px;
   grid-gap: 10px;
 }
@@ -56,10 +56,24 @@ menu div{
   opacity: 1.0;
   text-shadow: 2px 2px 4px white;
 }
+#chatroom{
+  background-color: darkslateblue;
+}
+#chatroom:hover{
+  opacity: 1.0;
+  text-shadow: 2px 2px 4px white;
+}
+#manual{
+  background-color: MediumVioletRed;
+}
+#manual:hover{
+  opacity: 1.0;
+  text-shadow: 2px 2px 4px white;
+}
 a{
   color: black;
 }
 a:hover{
   color: white;
-  text-shadow: 2px 2px 4px black;
+  text-shadow: 2px 2px 5px black;
 }

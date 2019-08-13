@@ -1,0 +1,10 @@
+body{
+  background-image:linear-gradient(darkslateblue,white);
+  height: 100vh;
+}
+h1{
+  text-align: center;
+  color: white;
+  text-shadow: 2px 2px 2px black;
+
+}
