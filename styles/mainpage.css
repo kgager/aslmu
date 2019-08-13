@@ -1,5 +1,6 @@
 body{
-  background-image: linear-gradient(tan,white);
+   background-image: linear-gradient(#AFB8AC,white);
+  /* background-color: #AFB8AC; */
   height: 100vh;
 }
 h1{
@@ -17,6 +18,7 @@ menu{
   grid-template-columns: 1fr 1fr 1fr;
   height: 400px;
   grid-gap: 6px;
+  padding: 0px;
 }
 menu div{
   display: flex;
@@ -31,50 +33,62 @@ menu div{
   background-color: maroon;
   height: 200px;
   opacity: 0.7;
+  box-shadow: 2px 2px 4px black;
 }
 #map:hover{
   opacity: 1.0;
   text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 2px #AFB8AC;
 }
 #translator{
   background-color: turquoise;
   height: 200px;
+  box-shadow: 2px 2px 4px black;
 }
 #translator:hover{
   opacity: 1.0;
   text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 2px #AFB8AC;
 }
 #event{
   background-color: peru;
   height: 200px;
+  box-shadow: 2px 2px 4px black;
 }
 #event:hover{
   opacity: 1.0;
   text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 2px #AFB8AC;
 }
 #myprofile{
   background-color: orange;
   height: 200px;
+  box-shadow: 2px 2px 4px black;
 }
 #myprofile:hover{
   opacity: 1.0;
   text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 2px #AFB8AC;
 }
 #chatroom{
   background-color: darkslateblue;
   height: 200px;
+  box-shadow: 2px 2px 4px black;
 }
 #chatroom:hover{
   opacity: 1.0;
   text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 2px #AFB8AC;
 }
 #manual{
   background-color: MediumVioletRed;
   height: 200px;
+  box-shadow: 2px 2px 4px black;
 }
 #manual:hover{
   opacity: 1.0;
   text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 2px #AFB8AC;
 }
 a{
   color: black;
