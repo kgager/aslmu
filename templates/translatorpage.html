@@ -11,7 +11,7 @@
 
     <h1>English to ASL Translator</h1>
     <p>Please Type in English Here:</p>
-  <body class = "asl">
+  <body>
     <form method="post" action="/translator">
       <input type="text" name="english">
       <input type="submit" value="Translate"/>
@@ -19,7 +19,9 @@
     <form method="post" action="/main">
       <input type="submit" value="GO TO MAIN"/>
     </form>
+    <div class="asl">
     {{ english }}
+    </div>
   </body>
 </html>
 

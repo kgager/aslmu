@@ -4,9 +4,11 @@
 }
 
 
-.asl{
+body{
   background-image: linear-gradient(turquoise, white);
   height: 100vh;
+}
+.asl{
   font-family: 'DissaramasCRUFingerspelling';
   font-size: 100px;
 }
