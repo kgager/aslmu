@@ -16,10 +16,12 @@
       <input type="submit" value="GO TO MAIN"/>
     </form>
     {% for word in result %}
-        <div id="asl">
-          <img src="{{ word }}"/>
-          {{ word }}
-          <!-- <img src="{{ gif_url }}"> -->
+        <div class="asl">
+          {% if "http" in word %}
+            <img src="{{ word }}"/>
+          {% else %}
+            {{ word }}
+          {% endif %}
         </div>
     {% endfor %}
   </body>
