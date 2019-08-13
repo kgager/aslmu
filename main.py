@@ -10,16 +10,10 @@ jinja_env = jinja2.Environment(
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
 
-# the handler section
-#class MainPage(webapp2.RequestHandler):
-    #def get(self):
-        #welcome_template = jinja_env.get_template('templates/welcome.html')
-        #self.response.write(welcome_template.render())  # the response
-
 class MainPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/mainpage.html')
-        self.response.write(form_template.render())  # the response
+        self.response.write(form_template.render())
     def post(self):
         form_template = jinja_env.get_template('templates/mainpage.html')
         self.response.write(form_template.render())
@@ -27,7 +21,7 @@ class MainPageHandler(webapp2.RequestHandler):
 class LoginPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/loginpage.html')
-        self.response.write(form_template.render())  # the response
+        self.response.write(form_template.render())
 
 class MyProfilePageHandler(webapp2.RequestHandler):
     def get(self):
@@ -37,38 +31,36 @@ class MyProfilePageHandler(webapp2.RequestHandler):
 class TranslatorPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/translatorpage.html')
-        self.response.write(form_template.render())  # the response
+        self.response.write(form_template.render())
     def post(self):
         english = self.request.get("english")
         form_template = jinja_env.get_template('templates/translatorpage.html')
         self.response.write(form_template.render({
         "english": english
-        }))  # the response
+        }))
 
 class EventsPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/eventpage.html')
-        self.response.write(form_template.render())  # the response
+        self.response.write(form_template.render())
 
 class MapsPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/mappage.html')
-        self.response.write(form_template.render())  # the response
+        self.response.write(form_template.render())
 
 class ManualHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/manual.html')
-        self.response.write(form_template.render())  # the response
+        self.response.write(form_template.render())
 
 class ChatroomPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/chatroom.html')
-        self.response.write(form_template.render())  # the response
+        self.response.write(form_template.render())
 
-
-# the app configuration section
 app = webapp2.WSGIApplication([
-    ('/main', MainPageHandler), #this maps the root url to the Main Page Handler
+    ('/main', MainPageHandler),
     ('/', LoginPageHandler),
     ('/translator', TranslatorPageHandler),
     ('/events', EventsPageHandler),
@@ -76,5 +68,4 @@ app = webapp2.WSGIApplication([
     ('/myprofile', MyProfilePageHandler),
     ('/chatroom', ChatroomPageHandler),
     ('/manual', ManualHandler)
-    #('/recipe', RecipeDisplayHandler)
 ], debug=True)
