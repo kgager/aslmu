@@ -57,13 +57,14 @@ class TranslatorPageHandler(webapp2.RequestHandler):
                 giphyP = {
                 "q": lexicon.get(word),
                 "api_key": "BWkKadSlz5EiOcSh3R61iPb5WPKb50Ha",
-                "limit": 1,
+                "limit": 5,
                 "rating": "g",
                 "lang": "en"
                 }
                 giphyBaseURL = "http://api.giphy.com/v1/gifs/search?"
                 giphyURL = giphyBaseURL + urlencode(giphyP)
                 giphyR = json.loads(urlfetch.fetch(giphyURL).content)
+                print(giphyR['data'])
                 gif_url = giphyR['data'][0]['images']['original']['url']
                 result.append(gif_url)
             else:
@@ -110,7 +111,7 @@ class ChatroomPageHandler(webapp2.RequestHandler):
 lexicon = {
     "hello": "asl hello",
     "car": "asl car",
-    "dog": "asl dog",
+    "dog": "asl dog sign with robert",
     "cat": "asl cat",
     "house": "asl house",
     "table": "asl car",
