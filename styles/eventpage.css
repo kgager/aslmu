@@ -1,6 +1,7 @@
 body{
   background-image:linear-gradient(peru,white);
   height: 130vh;
+  margin: 0px;
 }
 h1{
   text-align: center;

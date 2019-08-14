@@ -25,9 +25,23 @@ class LoginPageHandler(webapp2.RequestHandler):
         form_template = jinja_env.get_template('templates/loginpage.html')
         self.response.write(form_template.render())
 
+
 class MyProfilePageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/myprofile.html')
+        self.response.write(form_template.render())
+
+class RandomPageHandler(webapp2.RequestHandler):
+    def get(self):
+        form_template = jinja_env.get_template('templates/random.html')
+        self.response.write(form_template.render())
+class CulturePageHandler(webapp2.RequestHandler):
+    def get(self):
+        form_template = jinja_env.get_template('templates/culture.html')
+        self.response.write(form_template.render())
+class GetConnectPageHandler(webapp2.RequestHandler):
+    def get(self):
+        form_template = jinja_env.get_template('templates/getconnect.html')
         self.response.write(form_template.render())
 
 class TranslatorPageHandler(webapp2.RequestHandler):
@@ -122,5 +136,8 @@ app = webapp2.WSGIApplication([
     ('/myprofile', MyProfilePageHandler),
     ('/chatroom', ChatroomPageHandler),
     ('/manual', ManualHandler),
-    ('/index', IndexPageHandler)
+    ('/index', IndexPageHandler),
+    ('/culture', CulturePageHandler),
+    ('/getconnect', GetConnectPageHandler),
+    ('/random', RandomPageHandler),
 ], debug=True)
