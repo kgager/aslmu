@@ -9,6 +9,9 @@ h1{
   text-shadow: 2px 2px 2px black;
 
 }
+#logo{
+  height: 26px;
+}
 #calendar{
   box-shadow: 2px 2px 2px black;
 }

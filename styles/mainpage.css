@@ -24,6 +24,7 @@ menu div{
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: 60px;
   font-weight: bold;
   text-shadow: 2px 2px 2px white;
