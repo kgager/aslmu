@@ -9,7 +9,7 @@
     <style>
        /* Set the size of the div element that contains the map */
       #map {
-        height: 400px;  /* The height is 400 pixels */
+        height: 800px;  /* The height is 400 pixels */
         width: 100%;  /* The width is the width of the web page */
        }
     </style>
@@ -36,37 +36,47 @@
     <!--The div element for the map -->
     <div id="map"></div>
     <script>
-// Initialize and add the map
 function initMap() {
-  // The location of Uluru
-  var lmu = {lat: 33.970, lng: -118.416};
-  // The map, centered at Uluru
-  var map = new google.maps.Map(
-      document.getElementById('map'), {zoom: 4, center: lmu});
-  // The marker, positioned at Uluru
-  var marker = new google.maps.Marker({position: lmu, map: map});
+	var mapOptions = {
+		zoom: 8,
+		center: new google.maps.LatLng(37.5, -122),
+		mapTypeId: 'roadmap'
+	};
+	var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+  var goldenGatePosition = {lat: 37.8199,lng: -122.4783};
+  var marker = new google.maps.Marker({
+      position: goldenGatePosition,
+      map: map,
+      title: 'Golden Gate Bridge'
+      });
+  var myAddress = lat:{{ latitude }}, lng:{{ longitude }}
+  var marker = new google.maps.Marker({
+    	position: lmu,
+			map: map,
+			title: 'lmu'
+    			});
+
 }
-    </script>
-    <!--Load the API from the specified URL
-    * The async attribute allows the browser to render the page while the API loads
-    * The key parameter will contain your own API key (which is not needed for this tutorial)
-    * The callback parameter executes the initMap() function
-    -->
+</script>
+
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaZiiJUcgpqZMKakReHdYqeUtVv9wUHjg&callback=initMap">
     </script>
     <div class="form-popup" id="myForm">
-      <form action="/action_page.php" class="form-container">
+      <form action="initMap()" class="form-container" method = "post">
         <h1>Put me on the map!</h1>
 
-        <label for="location"><b>Location</b></label>
-        <input type="text" placeholder="Enter Address" name="Location" required>
+        <label for="latitude"><b>Latitude</b></label>
+        <input type="text" placeholder="Enter latitude" name="lat" required>
 
-        <button type="submit" class="btn">Put me on the map!</button>
+        <label for="longitude"><b>Location</b></label>
+        <input type="text" placeholder="Enter longitude" name="lng" required>
+
+
+
 
       </form>
+
     </div>
-    <form method="post" action="/main">
-      <input id = "julian's_buttom" type="submit" value="GO TO MAIN"/>
-    </form>
+
   </body>
 </html>
