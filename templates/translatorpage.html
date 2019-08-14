@@ -3,17 +3,32 @@
   <head>
   <meta charset="utf-8">
   <link rel="stylesheet" href="/styles/translatorpage.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
   <title>ASL</title>
   </head>
   <body>
+    <div class="navbar">
+  <a href="/main">Home</a>
+  <a href="/events">Events</a>
+  <div class="dropdown">
+  <button class="dropbtn">Dropdown
+  <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+  <a href="/translator">Translator</a>
+  <a href="/maps">Map Page</a>
+  <a href="/chatroom">Chatroom</a>
+  <a href="/manual">Alphabet Chart</a>
+  <a href="/myprofile">My Profile</a>
+  </div>
+  </div>
+  </div>
     <h1>English to ASL Translator</h1>
     <p>Please Type in English Here:</p>
     <form method="post" action="/translator">
       <input type="text" name="Query">
       <input type="submit" value="Translate"/>
-    </form>
-    <form method="post" action="/main">
-      <input type="submit" value="GO TO MAIN"/>
     </form>
     {% for word in result %}
         <div class="asl">
