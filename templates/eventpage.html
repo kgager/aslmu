@@ -5,12 +5,26 @@
     <title>Eventpage</title>
   </head>
       <link rel="stylesheet" href="/styles/eventpage.css">
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <body>
+    <div class="navbar">
+  <a href="/main">Home</a>
+  <a href="/events">Events</a>
+  <div class="dropdown">
+  <button class="dropbtn">Dropdown
+  <i class="fa fa-caret-down"></i>
+  </button>
+  <div class="dropdown-content">
+  <a href="/translator">Translator</a>
+  <a href="/maps">Map Page</a>
+  <a href="/chatroom">Chatroom</a>
+  <a href="/manual">Alphabet Chart</a>
+  <a href="/myprofile">My Profile</a>
+  </div>
+  </div>
+  </div>
     <h1>Events</h1>
     <p>this is the event page</p>
-    <form method="post" action="/main">
-      <input  id = "kevin's_button" type="submit" value="GO TO MAIN"/>
-    </form>
     <!-- <form method="post" action="/index">
       <input type="submit" value="Index"/> -->
       <iframe src="https://calendar.google.com/calendar/embed?src=c4urib1lbe9ufjndftnpvu80jc%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
