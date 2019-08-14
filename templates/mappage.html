@@ -38,28 +38,108 @@
     <script>
 function initMap() {
 	var mapOptions = {
-		zoom: 8,
-		center: new google.maps.LatLng(37.5, -122),
+		zoom: 5,
+		center: new google.maps.LatLng(39.970, -98.579),
 		mapTypeId: 'roadmap'
 	};
 	var map = new google.maps.Map(document.getElementById('map'), mapOptions);
+
+  // let address = document.querySelector("#userInputtedAddresses")
+  // let userLatitude = document.querySelector("#lat")
+  // let userLongitude = document.querySelector("#lng")
+
+
   var goldenGatePosition = {lat: 37.8199,lng: -122.4783};
   var marker = new google.maps.Marker({
       position: goldenGatePosition,
       map: map,
       title: 'Golden Gate Bridge'
       });
-  var myAddress = lat:{{ latitude }}, lng:{{ longitude }}
+
+  var moon = {lat: 47.66,lng: -122.338};
   var marker = new google.maps.Marker({
-    	position: lmu,
-			map: map,
-			title: 'lmu'
-    			});
+      position: moon,
+      map: map,
+      title: 'Mollys Moon'
+      });
+
+  var crazy = {lat: 30.241,lng: -97.784};
+  var marker = new google.maps.Marker({
+      position: crazy,
+      map: map,
+      title: 'Crepe Crazy'
+      });
+
+  var lmu = {lat: 33.970,lng: -118.416};
+  var marker = new google.maps.Marker({
+      position: lmu,
+      map: map,
+      title: 'Loyola Marymount University'
+      });
+
+  var pizzaBar = {lat: 33.60,lng: -117.883};
+  var marker = new google.maps.Marker({
+    position: pizzaBar,
+    map: map,
+    title: 'Pizzabar'
+    });
+
+  var sbucks = {lat: 40.61,lng: -78.578};
+  var marker = new google.maps.Marker({
+      position: sbucks,
+      map: map,
+      title: 'Starbucks Drive-Thru'
+      });
+
+  var mozzeria = {lat: 33.970,lng: -117.416};
+  var marker = new google.maps.Marker({
+      position: mozzeria,
+      map: map,
+      title: 'Mozzeria'
+      });
+
+  var pizza = {lat: 38.482,lng: -77.45};
+  var marker = new google.maps.Marker({
+      position: pizza,
+      map: map,
+      title: '&pizza'
+      });
+  var culver = {lat: 40.894,lng: -95.67};
+  var marker = new google.maps.Marker({
+      position: culver,
+      map: map,
+      title: 'Culvers'
+      });
+
+  // var request = {
+  //   placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
+  //   fields: ['name', 'formatted_address', 'place_id', 'geometry']
+  // };
+  var infowindow = new google.maps.InfoWindow();
+  var service = new google.maps.places.PlacesService(map);
+  //service.getDetails(request, callback);
+
+  // service.getDetails(request, function(place, status) {
+  //   if (status === google.maps.places.PlacesServiceStatus.OK) {
+  //         var marker = new google.maps.Marker({
+  //           map: map,
+  //           position: place.geometry.location
+  //         });
+    google.maps.event.addListener(marker, 'click', function() {
+      infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
+          'Place ID: ' + place.place_id + '<br>' +
+          place.formatted_address + '</div>');
+        infowindow.open(map, this);
+      });
+//     }
+//   });
+// }
+
 
 }
 </script>
 
-    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaZiiJUcgpqZMKakReHdYqeUtVv9wUHjg&callback=initMap">
+    <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaZiiJUcgpqZMKakReHdYqeUtVv9wUHjg&libraries=places&callback=initMap">
     </script>
     <div class="form-popup" id="myForm">
       <form action="initMap()" class="form-container" method = "post">
@@ -70,10 +150,10 @@ function initMap() {
 
         <label for="longitude"><b>Location</b></label>
         <input type="text" placeholder="Enter longitude" name="lng" required>
-
-
-
-
+        <div id = "userInputtedAddresses">
+          <span id = "lat"> {{ latitude }} </span>
+          <span id = "lng" > {{ longitude }} </span>
+        </div>
       </form>
 
     </div>

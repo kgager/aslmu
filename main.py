@@ -74,13 +74,13 @@ class MapsPageHandler(webapp2.RequestHandler):
         form_template = jinja_env.get_template('templates/mappage.html')
         self.response.write(form_template.render())
     def post(self):
+        latitude = int(self.request.get("lat"))
+        longitude = int(self.request.get("lng"))
         form_template = jinja_env.get_template('templates/mappage.html')
         self.response.write(form_template.render({
         "latitude" : latitude,
         "longitude" : longitude
         }))
-        latitude = int(self.request.get("lat"))
-        longitude = int(self.request.get("lng"))
 
 
 class ManualHandler(webapp2.RequestHandler):
