@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Notes</title>
+    <link rel="stylesheet" href="/styles/notes.css">
+  </head>
+  <body>
+    <h1>Notes</h1>
+    {% if nickname %}
+      <div>Welcome, {{ nickname }} | <a href="{{ logout_url }}">Logout</a></div>
+    {% endif %}
+    <section>
+    {% for note in notes %}
+      <article>
+        {{ note.timestamp }} ({{note.user_id}}) <div>{{ note.content }}</div>
+      </article>
+    {% endfor %}
+    </section>
+    <p id="addbutton"><a href="/notes">Add a new note</a></p>
+    <script src="/scripts/notes.js"></script>
+  </body>
+</html>

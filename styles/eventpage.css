@@ -1,6 +1,7 @@
 body{
   background-image:linear-gradient(peru,white);
-  height: 120vh;
+  height: 130vh;
+  margin: 0px;
 }
 h1{
   text-align: center;
@@ -8,8 +9,65 @@ h1{
   text-shadow: 2px 2px 2px black;
 
 }
+/* #mainb{
+  padding: 0px;
+} */
+#mainb{
+  padding: 7px;
+}
+#logo{
+  height: 1.8em;
+}
+#calendar{
+  box-shadow: 2px 2px 2px black;
+}
+#buttons{
+  display: grid;
+  grid-template-rows: 1fr;
+  grid-template-columns: 1fr 1fr;
+  display: flex;
+  justify-content: center;
+  text-decoration: none;
+}
+#eventb{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  background-color: darkblue;
+  width: 400px;
+  border-bottom-left-radius: 25px;
+  text-decoration: none;
+  color: white;
+}
+#eventb:hover{
+  text-shadow: 2px 2px 1px #8C8381;
+}
+#checkin{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 45px;
+  font-weight: bold;
+  text-shadow: 2px 2px 2px black;
+  background-color: lightblue;
+  width: 400px;
+  border-bottom-right-radius: 25px;
+  text-decoration: none;
+  color: white;
+}
+#checkin:hover{
+  text-shadow: 2px 2px 1px #8C8381;
+}
 body {
   font-family: Arial, Helvetica, sans-serif;
+
+}
+section{
+    display: flex;
+    justify-content: center;
 }
 
 .navbar {

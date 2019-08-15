@@ -1,7 +1,8 @@
 body{
    background-image: linear-gradient(#AFB8AC,white);
   /* background-color: #AFB8AC; */
-  height: 110vh;
+  height: 142vh;
+  margin: 0px;
 }
 h1{
   text-align: center;
@@ -14,7 +15,7 @@ text-shadow: 2px 2px 4px black;
 } */
 menu{
   display: grid;
-  grid-template-rows: 1fr 1fr;
+  grid-template-rows: 1fr 1fr 1fr;
   grid-template-columns: 1fr 1fr 1fr;
   height: 400px;
   grid-gap: 6px;
@@ -24,6 +25,7 @@ menu div{
   display: flex;
   align-items: center;
   justify-content: center;
+  text-align: center;
   font-size: 60px;
   font-weight: bold;
   text-shadow: 2px 2px 2px white;
@@ -46,6 +48,36 @@ menu div{
 }
 #translator:hover{
   background-color: rgba(64,224,208,1);
+  text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 2px #AFB8AC;
+}
+#random{
+  background-color: rgba(85,107,47,.7);
+  height: 200px;
+  box-shadow: 2px 2px 4px black;
+}
+#random:hover{
+  background-color: rgba(85,107,47,1);
+  text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 2px #AFB8AC;
+}
+#getconnect{
+  background-color: rgba(0, 255, 127,.7);
+  height: 200px;
+  box-shadow: 2px 2px 4px black;
+}
+#getconnect:hover{
+  background-color: rgba(0, 255, 127,1);
+  text-shadow: 2px 2px 4px black;
+  box-shadow: 2px 2px 2px #AFB8AC;
+}
+#culture{
+  background-color: rgba(250,128,114,.7);
+  height: 200px;
+  box-shadow: 2px 2px 4px black;
+}
+#culture:hover{
+  background-color: rgba(250,128,114,1);
   text-shadow: 2px 2px 4px black;
   box-shadow: 2px 2px 2px #AFB8AC;
 }

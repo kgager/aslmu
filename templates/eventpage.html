@@ -7,27 +7,18 @@
       <link rel="stylesheet" href="/styles/eventpage.css">
       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
   <body>
-    <div class="navbar">
-  <a href="/main">Home</a>
-  <a href="/events">Events</a>
-  <div class="dropdown">
-  <button class="dropbtn">Dropdown
-  <i class="fa fa-caret-down"></i>
-  </button>
-  <div class="dropdown-content">
-  <a href="/translator">Translator</a>
-  <a href="/maps">Map Page</a>
-  <a href="/chatroom">Chatroom</a>
-  <a href="/manual">Alphabet Chart</a>
-  <a href="/myprofile">My Profile</a>
-  </div>
-  </div>
-  </div>
+    {% include "templates/navbar.html" %}
     <h1>Events</h1>
-    <p>this is the event page</p>
     <!-- <form method="post" action="/index">
-      <input type="submit" value="Index"/> -->
-      <iframe src="https://calendar.google.com/calendar/embed?src=c4urib1lbe9ufjndftnpvu80jc%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-    </form>
+<input type="submit" value="Index"/> -->
+      <section>
+        <iframe id ="calendar" src="https://calendar.google.com/calendar/embed?src=c4urib1lbe9ufjndftnpvu80jc%40group.calendar.google.com&ctz=America%2FLos_Angeles" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
+      </section>
+      <section id = 'buttons'>
+        <a id = "eventb" href="https://calendar.google.com/calendar/r/eventedit?cid=c4urib1lbe9ufjndftnpvu80jc%40group.calendar.google.com">Add Event</a>
+        <a id = "checkin" href="https://calendar.google.com/calendar/r/month/2019/8/15?eid=MjlobGxxdXJzYTNkZzg1azA5dW9lcm9vc3EgYzR1cmliMWxiZTl1ZmpuZGZ0bnB2dTgwamNAZw&ctz=America/Los_Angeles&sf=true">Check In</a>
+      </section>
+
+
   </body>
 </html>

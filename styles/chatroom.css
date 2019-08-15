@@ -1,15 +1,20 @@
 body{
   background-image:linear-gradient(darkslateblue,white);
   height: 100vh;
+  margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 h1{
   text-align: center;
   color: white;
-  text-shadow: 2px 2px 2px black;
+  text-shadow: 2px 2px 4px black;
 
 }
-body {
-  font-family: Arial, Helvetica, sans-serif;
+#mainb{
+  padding: 7px;
+}
+#logo{
+  height: 1.8em;
 }
 
 .navbar {

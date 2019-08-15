@@ -4,8 +4,25 @@
 }
 
 body{
-  background-image: linear-gradient(turquoise, white);
+  background: linear-gradient(turquoise, white) fixed;
   height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: center;
+  margin: 0px;
+  padding: 0px;
+}
+#mainb{
+  padding: 7px;
+}
+#logo{
+  height: 1.8em;
+}
+#englishhandler{
+  width: 100%;
+  text-align: center;
+  background-color: brown;
 }
 .asl{
   font-family: 'DissaramasCRUFingerspelling';
