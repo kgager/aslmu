@@ -4,12 +4,15 @@ body{
   font-family: Arial, Helvetica, sans-serif;
   margin: 0;
 }
-h1{
-  text-align: center;
+h1 {
+  background-color: brown;
   color: white;
+  font-size: 32px;
+  margin: 0;
+  padding: 20px 0;
+  text-align: center;
   text-shadow: 2px 2px 2px black;
 }
-
 #mainb{
   padding: 7px;
 }

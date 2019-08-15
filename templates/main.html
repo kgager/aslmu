@@ -6,7 +6,8 @@
     <link rel="stylesheet" href="/styles/notes.css">
   </head>
   <body>
-    <h1>Notes</h1>
+    {% include "templates/navbar.html" %}
+    <h1>Message Board</h1>
     {% if nickname %}
       <div>Welcome, {{ nickname }} | <a href="{{ logout_url }}">Logout</a></div>
     {% endif %}
