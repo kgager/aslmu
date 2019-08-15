@@ -4,7 +4,7 @@
 }
 
 body{
-  background: linear-gradient(turquoise, white) fixed;
+  background: linear-gradient(#BC9191, white) fixed;
   height: 100vh;
   display: flex;
   flex-direction: column;
