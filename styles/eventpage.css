@@ -9,8 +9,14 @@ h1{
   text-shadow: 2px 2px 2px black;
 
 }
+/* #mainb{
+  padding: 0px;
+} */
+#mainb{
+  padding: 7px;
+}
 #logo{
-  height: 26px;
+  height: 1.8em;
 }
 #calendar{
   box-shadow: 2px 2px 2px black;
@@ -36,6 +42,9 @@ h1{
   text-decoration: none;
   color: white;
 }
+#eventb:hover{
+  text-shadow: 2px 2px 1px #8C8381;
+}
 #checkin{
   display: flex;
   align-items: center;
@@ -48,6 +57,9 @@ h1{
   border-bottom-right-radius: 25px;
   text-decoration: none;
   color: white;
+}
+#checkin:hover{
+  text-shadow: 2px 2px 1px #8C8381;
 }
 body {
   font-family: Arial, Helvetica, sans-serif;

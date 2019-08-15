@@ -2,6 +2,7 @@ body{
    background-image: linear-gradient(#AFB8AC,white);
   /* background-color: #AFB8AC; */
   height: 142vh;
+  margin: 0px;
 }
 h1{
   text-align: center;

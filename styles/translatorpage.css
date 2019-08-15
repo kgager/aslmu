@@ -13,6 +13,12 @@ body{
   margin: 0px;
   padding: 0px;
 }
+#mainb{
+  padding: 7px;
+}
+#logo{
+  height: 1.8em;
+}
 #englishhandler{
   width: 100%;
   text-align: center;
