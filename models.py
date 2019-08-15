@@ -8,3 +8,4 @@ class Note(ndb.Model):
 class User(ndb.Model):
     nickname = ndb.StringProperty()
     email = ndb.StringProperty()
+    description = ndb.StringProperty()

@@ -32,6 +32,9 @@ class LoginPageHandler(webapp2.RequestHandler):
         googleUser = users.get_current_user()
         if googleUser:
             log_url=users.create_logout_url("/")
+            dbuser = User.query().filter(User.email==googleUser.email()).get()
+            if not dbuser:
+                create_user(googleUser.nickname(),googleUser.email())
         else:
             log_url=users.create_login_url("/main")
         self.response.write(form_template.render({
@@ -40,8 +43,19 @@ class LoginPageHandler(webapp2.RequestHandler):
 
 class MyProfilePageHandler(webapp2.RequestHandler):
     def get(self):
-        form_template = jinja_env.get_template('templates/myprofile.html')
-        self.response.write(form_template.render())
+        googleUser = users.get_current_user()
+        if googleUser:
+            form_template = jinja_env.get_template('templates/myprofile.html')
+            dbuser = User.query().filter(User.email==googleUser.email()).get()
+            description = "No description"
+            if dbuser.description:
+                description= dbuser.description
+            self.response.write(form_template.render({
+                "nickname": users.get_current_user().nickname(),
+                "description": description
+            }))
+        else:
+            self.redirect("/")
 
 class RandomPageHandler(webapp2.RequestHandler):
     def get(self):
@@ -141,6 +155,23 @@ class NoteHandler(webapp2.RequestHandler):
         Note(user_id=user.user_id(), content=note).put()
         self.redirect('/chatroom')
 
+class DescriptionHandler(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+        template = jinja_env.get_template('templates/description_entry.html')
+        self.response.write(template.render({
+            'nickname' : user.nickname(),
+            'logout_url': users.create_logout_url('/')}))
+    def post(self):
+        description = self.request.get('description')
+        if len(description) > 1500:
+            description = description[:1500]
+        googleUser = users.get_current_user()
+        dbuser = User.query().filter(User.email==googleUser.email()).get()
+        dbuser.description = description
+        dbuser.put()
+        self.redirect('/myprofile')
+
 class MostRecentNoteHandler(webapp2.RequestHandler):
     def get(self):
         note = Note.query().order(-Note.timestamp).get()
@@ -182,4 +213,7 @@ app = webapp2.WSGIApplication([
     ('/culture', CulturePageHandler),
     ('/getconnect', GetConnectPageHandler),
     ('/random', RandomPageHandler),
+    ('/description', DescriptionHandler),
+    ('/description_entry', DescriptionHandler),
+
 ], debug=True)
