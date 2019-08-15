@@ -6,11 +6,17 @@ import urllib
 from random import randint
 from urllib import urlencode
 from google.appengine.api import urlfetch
+from google.appengine.api import users
+from models import *
 
 jinja_env = jinja2.Environment(
     loader=jinja2.FileSystemLoader(os.path.dirname(__file__)),
     extensions=['jinja2.ext.autoescape'],
     autoescape=True)
+
+def create_user(nickname, email):
+    user = User(nickname=nickname, email=email)
+    user.put()
 
 class MainPageHandler(webapp2.RequestHandler):
     def get(self):
@@ -23,8 +29,14 @@ class MainPageHandler(webapp2.RequestHandler):
 class LoginPageHandler(webapp2.RequestHandler):
     def get(self):
         form_template = jinja_env.get_template('templates/loginpage.html')
-        self.response.write(form_template.render())
-
+        googleUser = users.get_current_user()
+        if googleUser:
+            log_url=users.create_logout_url("/")
+        else:
+            log_url=users.create_login_url("/main")
+        self.response.write(form_template.render({
+        "log": log_url
+        }))
 
 class MyProfilePageHandler(webapp2.RequestHandler):
     def get(self):
@@ -103,10 +115,37 @@ class ManualHandler(webapp2.RequestHandler):
         form_template = jinja_env.get_template('templates/manual.html')
         self.response.write(form_template.render())
 
-class ChatroomPageHandler(webapp2.RequestHandler):
+class ChatRoomHandler(webapp2.RequestHandler):
     def get(self):
-        form_template = jinja_env.get_template('templates/chatroom.html')
-        self.response.write(form_template.render())
+        notes = Note.query().order(-Note.timestamp).fetch(limit=20)
+        user = users.get_current_user()
+        logout_url = users.create_logout_url('/') if user else None
+        template = jinja_env.get_template('templates/main.html')
+        self.response.write(template.render({
+            'notes': notes,
+            'nickname' : user.nickname() if user else None,
+            'logout_url': logout_url }))
+
+class NoteHandler(webapp2.RequestHandler):
+    def get(self):
+        user = users.get_current_user()
+        template = jinja_env.get_template('templates/note_entry.html')
+        self.response.write(template.render({
+            'nickname' : user.nickname(),
+            'logout_url': users.create_logout_url('/')}))
+    def post(self):
+        note = self.request.get('note')
+        if len(note) > 1500:
+            note = note[:1500]
+        user = users.get_current_user()
+        Note(user_id=user.user_id(), content=note).put()
+        self.redirect('/chatroom')
+
+class MostRecentNoteHandler(webapp2.RequestHandler):
+    def get(self):
+        note = Note.query().order(-Note.timestamp).get()
+        self.response.headers['Content-Type'] = 'text-plain'
+        self.response.write(str(note.timestamp if note else ''))
 
 lexicon = {
     "hello": "asl hello",
@@ -129,13 +168,15 @@ lexicon = {
 
 
 app = webapp2.WSGIApplication([
+    ('/chatroom', ChatRoomHandler),
+    ('/notes', NoteHandler),
+    ('/most-recent-note', MostRecentNoteHandler),
     ('/main', MainPageHandler),
     ('/', LoginPageHandler),
     ('/translator', TranslatorPageHandler),
     ('/events', EventsPageHandler),
     ('/maps', MapsPageHandler),
     ('/myprofile', MyProfilePageHandler),
-    ('/chatroom', ChatroomPageHandler),
     ('/manual', ManualHandler),
     ('/index', IndexPageHandler),
     ('/culture', CulturePageHandler),
