@@ -1,26 +1,24 @@
 body{
   background-image:linear-gradient(peru,white);
-  height: 130vh;
+  height: 120vh;
   margin: 0px;
+  font-family: Arial, Helvetica, sans-serif;
 }
 h1{
   text-align: center;
   color: white;
   text-shadow: 2px 2px 2px black;
-
 }
-/* #mainb{
-  padding: 0px;
-} */
+
 #mainb{
   padding: 7px;
 }
 #logo{
   height: 1.8em;
 }
-#calendar{
+/* #calendar{
   box-shadow: 2px 2px 2px black;
-}
+} */
 #buttons{
   display: grid;
   grid-template-rows: 1fr;
@@ -60,10 +58,6 @@ h1{
 }
 #checkin:hover{
   text-shadow: 2px 2px 1px #8C8381;
-}
-body {
-  font-family: Arial, Helvetica, sans-serif;
-
 }
 section{
     display: flex;
