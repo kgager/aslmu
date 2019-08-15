@@ -46,14 +46,13 @@ menu div{
 }
 
 #map{
-  background-image: linear-gradient(#0076A3, #009BD6);
+  background-image:linear-gradient(#0076A3, #009BD6);
   height: 200px;
   box-shadow: 2px 2px 4px black;
 }
 #map:hover{
   background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-
 }
 #translator{
   background-image: linear-gradient(#0076A3, #009BD6);
@@ -63,7 +62,6 @@ menu div{
 #translator:hover{
   background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-
 }
 #random{
   background-image: linear-gradient(#0ABBFF, #37C8FF);
@@ -73,7 +71,6 @@ menu div{
 #random:hover{
   background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-
 }
 #getconnect{
   background-image: linear-gradient(#009BD6,#0ABBFF);
@@ -83,7 +80,6 @@ menu div{
 #getconnect:hover{
   background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-
 }
 #culture{
   background-image: linear-gradient(#0ABBFF, #37C8FF);
@@ -93,7 +89,6 @@ menu div{
 #culture:hover{
   background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-
 }
 #event{
   background-image: linear-gradient(#0076A3, #009BD6);
@@ -103,7 +98,6 @@ menu div{
 #event:hover{
   background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-
 }
 #myprofile{
   background-image: linear-gradient(#0ABBFF, #37C8FF);
@@ -113,7 +107,6 @@ menu div{
 #myprofile:hover{
   background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-
 }
 #chatroom{
   background-image: linear-gradient(#009BD6,#0ABBFF);
@@ -123,7 +116,6 @@ menu div{
 #chatroom:hover{
   background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-
 }
 #manual{
   background-image: linear-gradient(#009BD6,#0ABBFF);
