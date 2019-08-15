@@ -13,6 +13,9 @@ h1 {
   text-align: center;
   text-shadow: 2px 2px 2px black;
 }
+#culture{
+  background-image: linear-gradient(#0076A3, #009BD6);
+}
 #mainb{
   padding: 7px;
 }
