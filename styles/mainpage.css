@@ -44,16 +44,16 @@ menu div{
   margin:20px;
   box-shadow: 2px 2px 4px black;
 }
+
 #map{
   background-image: linear-gradient(#0076A3, #009BD6);
   height: 200px;
   box-shadow: 2px 2px 4px black;
 }
 #map:hover{
-  background-color: 	rgb(0,118,163);
-
+  background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-  box-shadow: 2px 2px 2px #AFB8AC;
+
 }
 #translator{
   background-image: linear-gradient(#0076A3, #009BD6);
@@ -61,9 +61,9 @@ menu div{
   box-shadow: 2px 2px 4px black;
 }
 #translator:hover{
-  background-color: rgba(0,118,163, 1);
+  background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-  box-shadow: 2px 2px 2px #AFB8AC;
+
 }
 #random{
   background-image: linear-gradient(#0ABBFF, #37C8FF);
@@ -71,9 +71,9 @@ menu div{
   box-shadow: 2px 2px 4px black;
 }
 #random:hover{
-  background-color: rgba(0,118,163, 1);
+  background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-  box-shadow: 2px 2px 2px #AFB8AC;
+
 }
 #getconnect{
   background-image: linear-gradient(#009BD6,#0ABBFF);
@@ -81,9 +81,9 @@ menu div{
   box-shadow: 2px 2px 4px black;
 }
 #getconnect:hover{
-  background-color: rgba(0,118,163,1);
+  background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-  box-shadow: 2px 2px 2px #AFB8AC;
+
 }
 #culture{
   background-image: linear-gradient(#0ABBFF, #37C8FF);
@@ -91,9 +91,9 @@ menu div{
   box-shadow: 2px 2px 4px black;
 }
 #culture:hover{
-  background-color: rgba(0,118,163, 1);
+  background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-  box-shadow: 2px 2px 2px #AFB8AC;
+
 }
 #event{
   background-image: linear-gradient(#0076A3, #009BD6);
@@ -101,9 +101,9 @@ menu div{
   box-shadow: 2px 2px 4px black;
 }
 #event:hover{
-    background-color:  rgba(0,118,163, 1);
+  background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-  box-shadow: 2px 2px 2px #AFB8AC;
+
 }
 #myprofile{
   background-image: linear-gradient(#0ABBFF, #37C8FF);
@@ -111,9 +111,9 @@ menu div{
   box-shadow: 2px 2px 4px black;
 }
 #myprofile:hover{
-  background-color:  rgba(0,118,163, 1);
+  background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-  box-shadow: 2px 2px 2px #AFB8AC;
+
 }
 #chatroom{
   background-image: linear-gradient(#009BD6,#0ABBFF);
@@ -121,9 +121,9 @@ menu div{
   box-shadow: 2px 2px 4px black;
 }
 #chatroom:hover{
-  background-color:  rgba(0,118,163, 1);
+  background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-  box-shadow: 2px 2px 2px #AFB8AC;
+
 }
 #manual{
   background-image: linear-gradient(#009BD6,#0ABBFF);
@@ -131,9 +131,8 @@ menu div{
   box-shadow: 2px 2px 4px black;
 }
 #manual:hover{
-  background-color: rgba(0,118,163, 1);
+  background-image: linear-gradient(brown,brown);
   text-shadow: 2px 2px 4px black;
-  box-shadow: 2px 2px 2px #AFB8AC;
 }
 a{
   color: black;
