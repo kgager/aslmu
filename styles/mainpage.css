@@ -1,5 +1,9 @@
 body{
-   background-image: linear-gradient(#AFB8AC,white);
+   /* background-image: linear-gradient(#AFB8AC,white); */
+   background-image: url(https://ocbj.media.clients.ellingtoncms.com/img/photos/2018/05/14/loyola_t670.png?b3f6a5d7692ccc373d56e40cf708e3fa67d9af9d);
+   /* bacgkround-size: 100%, 100%; */
+   background-repeat: no-repeat;
+   background-size: cover;
   /* background-color: #AFB8AC; */
   height: 142vh;
   margin: 0px;
@@ -30,94 +34,104 @@ menu div{
   font-weight: bold;
   text-shadow: 2px 2px 2px white;
 }
+#maintext{
+  text-align:center;
+  font-weight: bold;
+  /* transperancy: 0.4; */
+  /* background-color: white; */
+  padding: 10px;
+  height:150px;
+  margin:20px;
+  box-shadow: 2px 2px 4px black;
+}
 #map{
-  background-color: 	rgba(128,0,0,0.7);
+  background-image: linear-gradient(#0076A3, #009BD6);
   height: 200px;
   box-shadow: 2px 2px 4px black;
 }
 #map:hover{
-  background-color: 	rgba(128,0,0,1);
+  background-color: 	rgb(0,118,163);
 
   text-shadow: 2px 2px 4px black;
   box-shadow: 2px 2px 2px #AFB8AC;
 }
 #translator{
-  background-color: rgba(64,224,208,.7);
+  background-image: linear-gradient(#0076A3, #009BD6);
   height: 200px;
   box-shadow: 2px 2px 4px black;
 }
 #translator:hover{
-  background-color: rgba(64,224,208,1);
+  background-color: rgba(0,118,163, 1);
   text-shadow: 2px 2px 4px black;
   box-shadow: 2px 2px 2px #AFB8AC;
 }
 #random{
-  background-color: rgba(85,107,47,.7);
+  background-image: linear-gradient(#0ABBFF, #37C8FF);
   height: 200px;
   box-shadow: 2px 2px 4px black;
 }
 #random:hover{
-  background-color: rgba(85,107,47,1);
+  background-color: rgba(0,118,163, 1);
   text-shadow: 2px 2px 4px black;
   box-shadow: 2px 2px 2px #AFB8AC;
 }
 #getconnect{
-  background-color: rgba(0, 255, 127,.7);
+  background-image: linear-gradient(#009BD6,#0ABBFF);
   height: 200px;
   box-shadow: 2px 2px 4px black;
 }
 #getconnect:hover{
-  background-color: rgba(0, 255, 127,1);
+  background-color: rgba(0,118,163,1);
   text-shadow: 2px 2px 4px black;
   box-shadow: 2px 2px 2px #AFB8AC;
 }
 #culture{
-  background-color: rgba(250,128,114,.7);
+  background-image: linear-gradient(#0ABBFF, #37C8FF);
   height: 200px;
   box-shadow: 2px 2px 4px black;
 }
 #culture:hover{
-  background-color: rgba(250,128,114,1);
+  background-color: rgba(0,118,163, 1);
   text-shadow: 2px 2px 4px black;
   box-shadow: 2px 2px 2px #AFB8AC;
 }
 #event{
-  background-color: rgba(205,133, 63, .7);
+  background-image: linear-gradient(#0076A3, #009BD6);
   height: 200px;
   box-shadow: 2px 2px 4px black;
 }
 #event:hover{
-    background-color: rgba(205,133, 63,1);
+    background-color:  rgba(0,118,163, 1);
   text-shadow: 2px 2px 4px black;
   box-shadow: 2px 2px 2px #AFB8AC;
 }
 #myprofile{
-  background-color: rgb(255,165,0,.7);
+  background-image: linear-gradient(#0ABBFF, #37C8FF);
   height: 200px;
   box-shadow: 2px 2px 4px black;
 }
 #myprofile:hover{
-  background-color: rgba(255,165,0,1);
+  background-color:  rgba(0,118,163, 1);
   text-shadow: 2px 2px 4px black;
   box-shadow: 2px 2px 2px #AFB8AC;
 }
 #chatroom{
-  background-color: rgba(72, 61, 139,.7);
+  background-image: linear-gradient(#009BD6,#0ABBFF);
   height: 200px;
   box-shadow: 2px 2px 4px black;
 }
 #chatroom:hover{
-  background-color: rgba(72, 61, 139, 1);
+  background-color:  rgba(0,118,163, 1);
   text-shadow: 2px 2px 4px black;
   box-shadow: 2px 2px 2px #AFB8AC;
 }
 #manual{
-  background-color: rgba(199, 21, 133,.7);
+  background-image: linear-gradient(#009BD6,#0ABBFF);
   height: 200px;
   box-shadow: 2px 2px 4px black;
 }
 #manual:hover{
-  background-color: rgba(199, 21, 133,1);
+  background-color: rgba(0,118,163, 1);
   text-shadow: 2px 2px 4px black;
   box-shadow: 2px 2px 2px #AFB8AC;
 }
