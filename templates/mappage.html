@@ -5,7 +5,6 @@
     <title>Map Page</title>
     <link rel="stylesheet" href="/styles/mappage.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
-
     <style>
        /* Set the size of the div element that contains the map */
       #map {
@@ -49,61 +48,151 @@ function initMap() {
   // let userLongitude = document.querySelector("#lng")
 
 
-  var goldenGatePosition = {lat: 37.8199,lng: -122.4783};
-  var marker = new google.maps.Marker({
-      position: goldenGatePosition,
-      map: map,
-      title: 'Golden Gate Bridge'
-      });
+
 
   var moon = {lat: 47.66,lng: -122.338};
-  var marker = new google.maps.Marker({
+  var marker6 = new google.maps.Marker({
       position: moon,
       map: map,
       title: 'Mollys Moon'
       });
+  var contentString6 = '<div id="content">'+
+    '<div id="siteNotice1">'+
+      '</div>'+
+      '<h1 id="firstHeading1" class="firstHeading1">Mollys Moon</h1>'+
+      '<div id="bodyContent1">'+
+        '<p><b>Mollys Moon</b>This popular ice cream stop — rhubarb cardamom sorbet, anyone? — with several Seattle-area locations includes employees trained in American Sign Language, according to a recent KOMO News story, creating a more inclusive, welcoming experience.</p>'+
+        '</div>';
+
+  var infowindow6 = new google.maps.InfoWindow({
+    content: contentString6
+  });
+
+  marker6.addListener('click', function() {
+    infowindow6.open(map, marker6);
+  })
 
   var crazy = {lat: 30.241,lng: -97.784};
-  var marker = new google.maps.Marker({
+  var marker5 = new google.maps.Marker({
       position: crazy,
       map: map,
       title: 'Crepe Crazy'
       });
+  var contentString5 = '<div id="content">'+
+    '<div id="siteNotice1">'+
+      '</div>'+
+      '<h1 id="firstHeading1" class="firstHeading1">Crepe Crazy</h1>'+
+      '<div id="bodyContent1">'+
+        '<p><b>Crepe Crazy</b>The deaf owners of this growing business not only rock sweet and savory crepes — caprese, Mediterranean medley, lemon zest dust, and more — but also offer easy ordering with sign language or pointing, and they make it a point to hire hearing-impaired community members.</p>'+
+        '</div>';
 
-  var lmu = {lat: 33.970,lng: -118.416};
-  var marker = new google.maps.Marker({
-      position: lmu,
-      map: map,
-      title: 'Loyola Marymount University'
-      });
+  var infowindow5 = new google.maps.InfoWindow({
+    content: contentString5
+  });
+
+  marker5.addListener('click', function() {
+    infowindow5.open(map, marker5);
+  })
 
   var pizzaBar = {lat: 33.60,lng: -117.883};
-  var marker = new google.maps.Marker({
+  var marker4 = new google.maps.Marker({
     position: pizzaBar,
     map: map,
     title: 'Pizzabar'
     });
+  var contentString4 = '<div id="content">'+
+    '<div id="siteNotice1">'+
+      '</div>'+
+      '<h1 id="firstHeading1" class="firstHeading1">pizza bar</h1>'+
+      '<div id="bodyContent1">'+
+        '<p><b>PizzaBar</b>This casual eatery close to the Newport pier offers pizza, pasta, fried calamari, and other choices galore. It also sports a sign-language-interpretation kiosk for ease of ordering, making it the first restaurant certified as deaf-friendly by the kiosk installer, Language People.</p>'+
+        '</div>';
+
+  var infowindow4 = new google.maps.InfoWindow({
+    content: contentString4
+  });
+
+
+  marker4.addListener('click', function() {
+    infowindow4.open(map, marker4);
+  });
+
 
   var sbucks = {lat: 40.61,lng: -78.578};
-  var marker = new google.maps.Marker({
+  var marker3 = new google.maps.Marker({
       position: sbucks,
       map: map,
       title: 'Starbucks Drive-Thru'
       });
 
+
+  var contentString3 = '<div id="content">'+
+      '<div id="siteNotice1">'+
+      '</div>'+
+      '<h1 id="firstHeading1" class="firstHeading1">starbucks</h1>'+
+      '<div id="bodyContent1">'+
+      '<p><b>Starbucks Drive-Thru</b>Customers using the drive-thru at this particular Starbucks near the Pennsylvania School for the Deaf and the Blind can use the ordering screen’s two-way video, letting them communicate with a barista in sign language.</p>'+
+      '</div>';
+
+  var infowindow3 = new google.maps.InfoWindow({
+    content: contentString3
+  });
+
+
+  marker3.addListener('click', function() {
+    infowindow3.open(map, marker3);
+  });
+
   var mozzeria = {lat: 33.970,lng: -117.416};
-  var marker = new google.maps.Marker({
+  var marker2 = new google.maps.Marker({
       position: mozzeria,
       map: map,
       title: 'Mozzeria'
       });
 
+  var contentString2 = '<div id="content">'+
+      '<div id="siteNotice1">'+
+      '</div>'+
+      '<h1 id="firstHeading1" class="firstHeading1">mozzeria</h1>'+
+      '<div id="bodyContent1">'+
+      '<p><b>Mozzeria</b>Whether you’re ASL-fluent or not, you’re welcome at this pizza-and-more spot owned by a deaf couple and staffed with deaf or hard-of-hearing employees. Options for easy ordering include pen and paper, pointing, and sign language.</p>'+
+      '</div>';
+
+  var infowindow2 = new google.maps.InfoWindow({
+    content: contentString2
+  });
+
+
+  marker2.addListener('click', function() {
+    infowindow2.open(map, marker2);
+  });
+
+// PIZZA
   var pizza = {lat: 38.482,lng: -77.45};
-  var marker = new google.maps.Marker({
+  var marker1 = new google.maps.Marker({
       position: pizza,
       map: map,
       title: '&pizza'
       });
+
+  var contentString1 = '<div id="content">'+
+      '<div id="siteNotice1">'+
+      '</div>'+
+      '<h1 id="firstHeading1" class="firstHeading1">pizza</h1>'+
+      '<div id="bodyContent1">'+
+      '<p><b>pizza</b>The H Street location of this bustling chain sits near Gallaudet University, the renowned school for deaf and hard-of-hearing students. Staff, who serve a diverse population of hearing and nonhearing patrons, typically know ASL or some basics of signing.</p>'+
+      '</div>';
+
+  var infowindow1 = new google.maps.InfoWindow({
+    content: contentString1
+  });
+
+
+  marker1.addListener('click', function() {
+    infowindow1.open(map, marker1);
+  });
+
+// CULVERS
   var culver = {lat: 40.894,lng: -95.67};
   var marker = new google.maps.Marker({
       position: culver,
@@ -111,26 +200,31 @@ function initMap() {
       title: 'Culvers'
       });
 
-  // var request = {
-  //   placeId: 'ChIJN1t_tDeuEmsRUsoyG83frY4',
-  //   fields: ['name', 'formatted_address', 'place_id', 'geometry']
-  // };
-  var infowindow = new google.maps.InfoWindow();
-  var service = new google.maps.places.PlacesService(map);
-  //service.getDetails(request, callback);
 
-  // service.getDetails(request, function(place, status) {
-  //   if (status === google.maps.places.PlacesServiceStatus.OK) {
-  //         var marker = new google.maps.Marker({
-  //           map: map,
-  //           position: place.geometry.location
-  //         });
+    var contentString = '<div id="content">'+
+        '<div id="siteNotice">'+
+        '</div>'+
+        '<h1 id="firstHeading" class="firstHeading">Culvers</h1>'+
+        '<div id="bodyContent">'+
+        '<p><b>Culvers</b>This local outlet of a national burgers-and-frozen-custards franchise installed a bell system at its drive-thru, letting deaf or hard-of-hearing customers alert staff if they need to pull forward and order using a menu form instead.</p>'+
+        '</div>';
+
+    var infowindow = new google.maps.InfoWindow({
+      content: contentString
+    });
+
+
+    marker.addListener('click', function() {
+      infowindow.open(map, marker);
+    });
+
     google.maps.event.addListener(marker, 'click', function() {
       infowindow.setContent('<div><strong>' + place.name + '</strong><br>' +
           'Place ID: ' + place.place_id + '<br>' +
           place.formatted_address + '</div>');
         infowindow.open(map, this);
       });
+
 //     }
 //   });
 // }
@@ -138,7 +232,6 @@ function initMap() {
 
 }
 </script>
-
     <script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAaZiiJUcgpqZMKakReHdYqeUtVv9wUHjg&libraries=places&callback=initMap">
     </script>
     <div class="form-popup" id="myForm">
