@@ -1,7 +1,8 @@
 body{
    /* background-image: linear-gradient(#AFB8AC,white); */
-   background-image: url(https://ocbj.media.clients.ellingtoncms.com/img/photos/2018/05/14/loyola_t670.png?b3f6a5d7692ccc373d56e40cf708e3fa67d9af9d);
+   /* background-image: url(https://ocbj.media.clients.ellingtoncms.com/img/photos/2018/05/14/loyola_t670.png?b3f6a5d7692ccc373d56e40cf708e3fa67d9af9d); */
    /* bacgkround-size: 100%, 100%; */
+   background-color: rgb(176,200,230);
    background-repeat: no-repeat;
    background-size: cover;
   /* background-color: #AFB8AC; */
@@ -35,7 +36,9 @@ menu div{
   text-shadow: 2px 2px 2px white;
 }
 #maintext{
+  background-color: #333;
   text-align:center;
+  color:white;
   font-weight: bold;
   /* transperancy: 0.4; */
   /* background-color: white; */
@@ -47,7 +50,8 @@ menu div{
 
 #map{
   background-image:linear-gradient(#0076A3, #009BD6);
-  height: 200px;
+  height: 150px;
+  margin:20px;
   box-shadow: 2px 2px 4px black;
 }
 #map:hover{
@@ -56,7 +60,8 @@ menu div{
 }
 #translator{
   background-image: linear-gradient(#0076A3, #009BD6);
-  height: 200px;
+  height: 150px;
+  margin:20px;
   box-shadow: 2px 2px 4px black;
 }
 #translator:hover{
@@ -65,7 +70,8 @@ menu div{
 }
 #random{
   background-image: linear-gradient(#0ABBFF, #37C8FF);
-  height: 200px;
+  height: 150px;
+  margin:20px;
   box-shadow: 2px 2px 4px black;
 }
 #random:hover{
@@ -74,7 +80,8 @@ menu div{
 }
 #getconnect{
   background-image: linear-gradient(#009BD6,#0ABBFF);
-  height: 200px;
+  height: 150px;
+  margin:20px;
   box-shadow: 2px 2px 4px black;
 }
 #getconnect:hover{
@@ -83,7 +90,8 @@ menu div{
 }
 #culture{
   background-image: linear-gradient(#0ABBFF, #37C8FF);
-  height: 200px;
+  height: 150px;
+  margin:20px;
   box-shadow: 2px 2px 4px black;
 }
 #culture:hover{
@@ -92,7 +100,8 @@ menu div{
 }
 #event{
   background-image: linear-gradient(#0076A3, #009BD6);
-  height: 200px;
+  height: 150px;
+  margin:20px;
   box-shadow: 2px 2px 4px black;
 }
 #event:hover{
@@ -101,7 +110,8 @@ menu div{
 }
 #myprofile{
   background-image: linear-gradient(#0ABBFF, #37C8FF);
-  height: 200px;
+  height: 150px;
+  margin:20px;
   box-shadow: 2px 2px 4px black;
 }
 #myprofile:hover{
@@ -110,7 +120,8 @@ menu div{
 }
 #chatroom{
   background-image: linear-gradient(#009BD6,#0ABBFF);
-  height: 200px;
+  height: 150px;
+  margin:20px;
   box-shadow: 2px 2px 4px black;
 }
 #chatroom:hover{
@@ -119,7 +130,8 @@ menu div{
 }
 #manual{
   background-image: linear-gradient(#009BD6,#0ABBFF);
-  height: 200px;
+  height: 150px;
+  margin:20px;
   box-shadow: 2px 2px 4px black;
 }
 #manual:hover{
